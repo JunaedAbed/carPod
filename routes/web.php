@@ -50,4 +50,7 @@ Route::post('/admin/logout', 'Auth\LoginController@logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/admin', function () {
 //     return view('auth.adminLogin');
+
+
+
 // })->name('admin');
