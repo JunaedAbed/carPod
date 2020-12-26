@@ -5,7 +5,7 @@
     <header class="hero">
         <div class="banner">
             <h1 class="banner-title">Customer Info Desk</h1>
-            <a href="/admin/client_requests.php">
+            <a href="/admin/requests">
                 <button class="banner-btn">See Requests</button>
             </a>
         </div>

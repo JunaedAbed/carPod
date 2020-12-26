@@ -47,7 +47,7 @@
                                         <div>
                                             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                                             
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            <form id="logout-form" action="{{ route('user.logout') }}" method="get" class="d-none">
                                                 @csrf  
                                             </form>
                                         </div>
@@ -68,7 +68,7 @@
                                         <a href="{{ route('login') }}">Login</a>
                                     </li>
                                     <li>
-                                        <a href="/admin">Admin</a>
+                                        <a href="/admin/login">Admin</a>
                                     </li>
                                 </ul>
                         

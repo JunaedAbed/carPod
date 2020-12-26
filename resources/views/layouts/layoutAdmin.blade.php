@@ -30,8 +30,8 @@
                         </span>
                         <h2>CarPod</h2>
                         
-                        {{-- @if (Route::has('login'))
-                            @auth
+                        @if (Route::has('login'))
+                            @auth('admin')
                                 <ul class="links cart-content" style="list-style-type: none;">
                                     <li>
                                         <a href="{{ url('/admin') }}">Home</a>
@@ -40,19 +40,16 @@
                                         <a href="/admin/client_messages">Messages</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/client_requests">Requests</a>
+                                        <a href="/admin/requests">Requests</a>
                                     </li>
                                     <li>
-                                        <a href="">Customer Info</a>
-                                    </li>
-                                    <li>
-                                        <a href="/admin/show">Vehicle Management</a>
+                                        <a href="/admin/customers">Customer Info</a>
                                     </li>
                                     <li>
                                         <div>
                                             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
                                             
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            <form id="logout-form" action="{{ route('admin.logout') }}" method="get" class="d-none">
                                                 @csrf  
                                             </form>
                                         </div>
@@ -78,36 +75,7 @@
                         
                                 
                             @endauth
-                        @endif --}}
-                        
-                        <ul class="links cart-content" style="list-style-type: none;">
-                            <li>
-                                <a href="{{ url('/admin') }}">Home</a>
-                            </li>
-                            <li>
-                                <a href="/admin/client_messages">Messages</a>
-                            </li>
-                            <li>
-                                <a href="/admin/requests">Requests</a>
-                            </li>
-                            <li>
-                                <a href="/admin/customers">Customer Info</a>
-                            </li>
-                            {{-- <li>
-                                <a href="/admin">Vehicle Management</a>
-                            </li> --}}
-                            <li>
-                                <div>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
-                                    
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf  
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
-                            
-                        
+                        @endif                             
                     </div>    
                 </aside>
                 

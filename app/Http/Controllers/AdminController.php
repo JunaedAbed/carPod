@@ -12,6 +12,11 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
+    
+    public function __construct(){
+        $this->middleware('auth:admin');
+    }
+    
     public function index(){
         
         $cars = Car::all();

@@ -4,13 +4,13 @@
 <div class="hero">
     <div class="banner">
         
-        <form method="POST" action="/admin/login">
+        <form method="POST" action="{{ route('admin.login.submit') }}">
             @csrf
             
             <h1 class="banner-title">{{ __('Admin Login') }}</h1>
 
             <div>
-                <label for="email" style="font-weight: bold">{{ __('Username') }}</label>
+                <label for="uname" style="font-weight: bold">{{ __('Username') }}</label>
 
                 <div>
                     <input id="uname" type="text" class="form-control @error('uname') is-invalid @enderror" name="uname" value="{{ old('uname') }}" required autocomplete="uname" autofocus>
