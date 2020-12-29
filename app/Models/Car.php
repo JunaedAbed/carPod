@@ -9,5 +9,18 @@ class Car extends Model
 {
     use HasFactory;
     
+    public $timestamps = false;
     
+    
+    protected $fillable = [
+        'car_name', 
+        'car_type', 
+        'image', 
+        'hire_cost', 
+        'capacity', 
+        'year', 
+        'color', 
+        'chassis', 
+        'status',   
+    ];
 }

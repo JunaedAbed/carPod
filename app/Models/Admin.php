@@ -15,6 +15,7 @@ class Admin extends Authenticatable
     protected $table = 'admin';
     protected $guard = 'admin';
     protected $primaryKey = 'admin_id';
+    public $timestamps = false;
     
     protected $fillable = [
         'admin_id',
